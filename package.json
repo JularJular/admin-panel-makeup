@@ -1,0 +1,28 @@
+{
+  "name": "admin-panel-makeup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JularJular/admin-panel-makeup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JularJular/admin-panel-makeup/issues"
+  },
+  "homepage": "https://github.com/JularJular/admin-panel-makeup#readme",
+  "dependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.2",
+    "prettier": "^2.5.1"
+  },
+  "lint-staged": {
+    "*.{js,html,css}": "prettier --write"
+  }
+}

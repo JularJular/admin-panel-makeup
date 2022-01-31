@@ -1,0 +1,101 @@
+:root {
+  --main-background: #e5e5e5;
+  --violet: #8055ff;
+  --unfocused: #bad8f5;
+  --attemption: #459df5;
+  --error: #f53152;
+}
+
+.main-input-block {
+  width: 22rem;
+  height: 25rem;
+  background: var(--main-background);
+  padding: 3rem;
+  border: 1px dashed var(--violet);
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.input-block {
+  font-family: "Ubuntu", sans-serif;
+  padding: 0.5rem 0;
+  width: 16rem;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+.label {
+  font-size: 0.8125rem;
+  line-height: 1rem;
+}
+
+.input {
+  width: 16rem;
+  height: 2rem;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.input_empty {
+  border: 1px solid var(--unfocused);
+}
+
+.input_empty:focus {
+  outline: solid 0.01rem var(--attemption);
+}
+
+.input_empty:hover {
+  border: 0.01rem solid var(--attemption);
+  box-shadow: 0 0 0.5em var(--attemption);
+}
+
+.input_incorrect {
+  border: 1px solid var(--error);
+}
+
+.input_incorrect:focus {
+  outline: solid 0.01rem var(--error);
+}
+
+.input_incorrect:hover {
+  border: 0.1rem solid var(--error);
+  box-shadow: 0 0 0.5em var(--error);
+}
+
+.input_disabled {
+  border: 1px solid var(--attemption);
+  background-color: var(--unfocused);
+}
+
+.input_disabled:focus {
+  outline: solid 0.01rem var(--attemption);
+}
+
+.input_disabled:hover {
+  border: 0.1rem solid var(--attemption);
+  box-shadow: 0 0 0.5em var(--attemption);
+}
+
+.icon {
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  z-index: 1;
+  right: 0.5rem;
+  top: 2.75rem;
+  opacity: 0.5;
+}
+
+.icon_incorrect:hover,
+.icon_disabled:hover {
+  opacity: 1;
+}

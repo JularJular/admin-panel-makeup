@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>input</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="input.css" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Ubuntu&subset=cyrillic,latin"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="main-input-block">
+      <div class="input-block">
+        <label for="input-empty" class="label">Дата и время заказа</label>
+        <input
+          id="input-empty"
+          class="input input_empty"
+          placeholder="Введите"
+          type="text"
+          value=""
+        />
+      </div>
+      <div class="input-block">
+        <label for="input-incorrect" class="label">Дата и время заказа</label>
+        <input
+          id="input-incorrect"
+          class="input input_incorrect"
+          placeholder="06.12.2021"
+          type="text"
+          value=""
+        />
+        <img class="icon icon_incorrect" src="./icons/x-medium.svg" />
+      </div>
+      <div class="input-block">
+        <label for="input-disabled" class="label">Дата и время заказа</label>
+        <input
+          id="input-disabled"
+          class="input input_disabled"
+          placeholder="06.12.2021"
+          type="text"
+          value=""
+        />
+        <img class="icon icon_disabled" src="./icons/locked.svg" />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+body,
+html {
+  background-color: #ffff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.console {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: relative;
+}
+
+.console-header {
+  display: flex;
+  background-color: #a8a8ff;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  height: 2rem;
+  font-family: Ubunty;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 2rem;
+  letter-spacing: 0.0125rem;
+  font-size: 1.625rem;
+  color: #8055ff;
+}
+
+.console-filters {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border: 0.1rem solid #a8a8ff;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+}
+
+.console-table {
+  height: 100%;
+  border: 0.1rem solid #8055ff;
+  display: flex;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+.console-table__header {
+  display: flex;
+  height: 3rem;
+  background-color: #8055ff;
+  margin: 0;
+}
+
+.console-table__content {
+  display: flex;
+  overflow-y: auto;
+  background-color: #a8a8ff;
+  height: 100%;
+}
+
+.console-footer {
+  position: fixed;
+  background-color: #8055ff;
+  height: 2rem;
+  bottom: 0;
+  left: 3rem;
+  right: 3rem;
+}
+
+.search {
+  display: flex;
+}
+
+.search__input {
+  width: 16rem;
+  height: 2rem;
+  background-color: #8055ff;
+}
+
+.search__button {
+  height: 2rem;
+  width: 2rem;
+  background-color: #8055ff;
+  margin-left: 0.5rem;
+}
+
+.status-button {
+  position: absolute;
+  right: 3.5rem;
+  height: 2rem;
+  width: 2rem;
+  background-color: #8055ff;
+}
