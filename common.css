@@ -4,11 +4,9 @@ body {
   height: 100%;
   font-size: 1rem;
   line-height: 1rem;
+  padding: 2rem;
 }
 
-.frame-block {
-  width: 60rem;
-  height: 100rem;
-  margin: 0;
-  padding: 0;
+.components {
+  font-size: 2rem;
 }
