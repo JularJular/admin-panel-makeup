@@ -7,6 +7,9 @@
     <title>input</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="input.css" />
+    <link rel="stylesheet" href="search-bar.css" />
+    <link rel="stylesheet" href="style.css" />
+
     <link
       href="http://fonts.googleapis.com/css?family=Ubuntu&subset=cyrillic,latin"
       rel="stylesheet"
@@ -34,7 +37,7 @@
           type="text"
           value=""
         />
-        <img class="icon icon_incorrect" src="./icons/x-medium.svg" />
+        <div class="icon-input icon-input_incorrect"></div>
       </div>
       <div class="input-block">
         <label for="input-disabled" class="label">Дата и время заказа</label>
@@ -44,8 +47,29 @@
           placeholder="06.12.2021"
           type="text"
           value=""
+          disabled
         />
-        <img class="icon icon_disabled" src="./icons/locked.svg" />
+        <div class="icon-input icon-input_disabled"></div>
+      </div>
+    </div>
+    <div class="main-search-block">
+      <div class="search-bar">
+        <input
+          class="search search_empty"
+          placeholder="Номер заказа или ФИО"
+          type="text"
+          value=""
+        />
+      </div>
+
+      <div class="search-bar">
+        <input
+          class="search search_filled"
+          placeholder="50744"
+          type="text"
+          value=""
+        />
+        <div class="icon icon_clear"></div>
       </div>
     </div>
   </body>

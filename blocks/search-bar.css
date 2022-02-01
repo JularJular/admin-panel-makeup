@@ -1,0 +1,86 @@
+:root {
+  --main-background: #e5e5e5;
+  --violet: #8055ff;
+  --unfocused: #bad8f5;
+  --attemption: #459df5;
+  --search: url("./icons/search.svg");
+  --clear: url("./icons/x-medium.svg");
+}
+
+.main-search-block {
+  width: 22rem;
+  height: 12rem;
+  background: var(--main-background);
+  padding: 3rem;
+  border: 1px dashed var(--violet);
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.search-bar {
+  font-family: "Ubuntu", sans-serif;
+  width: 16rem;
+  height: 2rem;
+  display: flex;
+  background: white;
+  border-radius: 0.25rem;
+  justify-content: space-around;
+  position: relative;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.25rem;
+  border: 1px solid var(--unfocused);
+  width: 14.5rem;
+  height: 2rem;
+  margin: auto;
+  background-image: var(--search);
+  background-repeat: no-repeat;
+  background-size: 1rem 1rem;
+  background-position: left center;
+  background-origin: padding-box;
+  padding-left: 1.5rem;
+  opacity: 0.7;
+}
+
+.search:hover {
+  border: 0.01rem solid var(--attemption);
+  box-shadow: 0 0 0.5em var(--attemption);
+  opacity: 1;
+}
+
+.search:focus {
+  outline: solid 0.01rem var(--attemption);
+  opacity: 1;
+}
+
+.search_empty::placeholder {
+  color: var(--attemption);
+}
+
+.search_filled::placeholder {
+  color: black;
+}
+
+.icon_clear {
+  height: 1rem;
+  width: 1rem;
+  position: absolute;
+  z-index: 1;
+  right: 0.5rem;
+  align-self: center;
+  opacity: 0.5;
+  background-image: var(--clear);
+}
+
+.icon_clear:hover {
+  opacity: 1;
+  cursor: pointer;
+}
