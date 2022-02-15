@@ -1,0 +1,92 @@
+body,
+html {
+  background-color: #ffff;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.wrapper {
+  padding: 2rem 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.admin-header {
+  display: flex;
+  background-color: #a8a8ff;
+  height: 2rem;
+  font-family: Ubunty;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 2rem;
+  font-size: 1.625rem;
+  color: #8055ff;
+}
+
+.admin-filters {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border: 2px solid #a8a8ff;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 3rem;
+}
+
+.table {
+  height: 100%;
+  border: 2px solid #8055ff;
+  display: flex;
+  flex-direction: column;
+}
+
+.table__header {
+  flex: 0 0 auto;
+  height: 3rem;
+  background-color: #8055ff;
+}
+
+.table__content {
+  display: flex;
+  overflow-y: auto;
+  background-color: #a8a8ff;
+  height: 100%;
+}
+
+.footer {
+  position: fixed;
+  background-color: #8055ff;
+  height: 3rem;
+  bottom: 0;
+  left: 3rem;
+  right: 3rem;
+}
+
+.search {
+  display: flex;
+}
+
+.search__input {
+  width: 16rem;
+  height: 2rem;
+  background-color: #8055ff;
+}
+
+.search__button {
+  height: 2rem;
+  width: 2rem;
+  background-color: #8055ff;
+  margin-left: 0.5rem;
+}
+
+.status-button {
+  position: absolute;
+  right: 3.5rem;
+  height: 2rem;
+  width: 2rem;
+  background-color: #8055ff;
+}
