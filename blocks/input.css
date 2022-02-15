@@ -1,16 +1,26 @@
 :root {
-  --main-background: #e5e5e5;
+  --main-background: white;
   --violet: #8055ff;
-  --unfocused: #bad8f5;
-  --attemption: #459df5;
+  --border: #459df5;
+  --blue-base: #bad8f5;
   --error: #f53152;
   --clear: url("./icons/x-medium.svg");
   --locked: url("./icons/locked.svg");
 }
+.html,
+body {
+  background-color: #ffff;
+  width: 100%;
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  line-height: 1rem;
+  flex-direction: row;
+}
 
 .main-input-block {
-  width: 22rem;
-  height: 25rem;
+  width: 352px;
+  height: 360px;
   background: var(--main-background);
   padding: 3rem;
   border: 1px dashed var(--violet);
@@ -20,103 +30,73 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  align-self: flex-start;
+  font-size: 13px;
+}
+.label {
+  margin-bottom: 8px;
+  cursor: pointer;
 }
 
 .input-block {
-  font-family: "Ubuntu", sans-serif;
-  padding: 0.5rem 0;
-  width: 16rem;
-  height: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: relative;
 }
 
-.label {
-  font-size: 0.8125rem;
-  line-height: 1rem;
+.input-block__group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 .input {
-  width: 16rem;
-  height: 2rem;
-  background: white;
   box-sizing: border-box;
-  border-radius: 0.25rem;
+  border-radius: 4px;
   position: relative;
+  border: 1px solid var(--border);
+  padding: 8px;
+  cursor: pointer;
 }
 
-.input_empty {
-  border: 1px solid var(--unfocused);
+.input:focus {
+  outline: solid 1px var(--border);
 }
 
-.input_empty:focus {
-  outline: solid 0.01rem var(--attemption);
-}
-
-.input_empty:hover {
-  border: 0.01rem solid var(--attemption);
-  box-shadow: 0 0 0.5em var(--attemption);
-}
-
-.input_empty::placeholder {
-  color: var(--attemption);
+.input::placeholder {
+  color: var(--blue-base);
 }
 
 .input_incorrect {
   border: 1px solid var(--error);
+  cursor: pointer;
 }
 
 .input_incorrect:focus {
-  outline: solid 0.01rem var(--error);
-}
-
-.input_incorrect:hover {
-  border: 0.1rem solid var(--error);
-  box-shadow: 0 0 0.5em var(--error);
-}
-
-.input_incorrect::placeholder,
-.input_disabled::placeholder {
-  color: black;
+  outline: solid 1px var(--error);
 }
 
 .input_disabled {
-  border: 1px solid var(--attemption);
-  background-color: var(--unfocused);
+  background-color: var(--blue-base);
+  cursor: auto;
+  color: black;
 }
 
-.input_disabled:focus {
-  outline: solid 0.01rem var(--attemption);
-}
-
-.input_disabled:hover {
-  border: 0.1rem solid var(--attemption);
-  box-shadow: 0 0 0.5em var(--attemption);
-}
-
-.icon-input {
+.icon {
   height: 1rem;
   width: 1rem;
   position: absolute;
   z-index: 1;
   right: 0.5rem;
-  top: 2.75rem;
-  opacity: 0.5;
-}
-
-.icon-input_incorrect:hover,
-.icon-input_disabled:hover {
-  opacity: 1;
+  top: 0.5rem;
+  border: none;
   cursor: pointer;
+  background: inherit;
+  padding: 0;
 }
 
-.icon-input_incorrect {
-  background-image: var(--clear);
-}
-
-.icon-input_disabled {
-  background-image: var(--locked);
+.icon_disabled {
+  cursor: auto;
 }

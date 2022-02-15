@@ -1,86 +1,84 @@
 :root {
-  --main-background: #e5e5e5;
+  --main-background: white;
   --violet: #8055ff;
-  --unfocused: #bad8f5;
-  --attemption: #459df5;
-  --search: url("./icons/search.svg");
-  --clear: url("./icons/x-medium.svg");
+  --blue-base: #bad8f5;
+  --border: #459df5;
+}
+
+.html,
+body {
+  background-color: #ffff;
+  width: 100%;
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  line-height: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .main-search-block {
   width: 22rem;
   height: 12rem;
-  background: var(--main-background);
   padding: 3rem;
+  background: var(--main-background);
   border: 1px dashed var(--violet);
   box-sizing: border-box;
   border-radius: 5px;
-  position: relative;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  align-self: flex-start;
+  justify-content: space-between;
 }
 
 .search-bar {
-  font-family: "Ubuntu", sans-serif;
-  width: 16rem;
+  width: 100%;
   height: 2rem;
   display: flex;
-  background: white;
-  border-radius: 0.25rem;
-  justify-content: space-around;
   position: relative;
 }
 
 .search {
   display: flex;
-  flex-direction: row;
-  border-radius: 0.25rem;
-  border: 1px solid var(--unfocused);
-  width: 14.5rem;
-  height: 2rem;
-  margin: auto;
-  background-image: var(--search);
-  background-repeat: no-repeat;
-  background-size: 1rem 1rem;
-  background-position: left center;
-  background-origin: padding-box;
-  padding-left: 1.5rem;
-  opacity: 0.7;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  padding-left: 35px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .search:hover {
-  border: 0.01rem solid var(--attemption);
-  box-shadow: 0 0 0.5em var(--attemption);
-  opacity: 1;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 0.5em var(--blue-base);
 }
 
 .search:focus {
-  outline: solid 0.01rem var(--attemption);
-  opacity: 1;
+  outline: solid 1px var(--border);
 }
 
-.search_empty::placeholder {
-  color: var(--attemption);
+.search::placeholder {
+  color: var(--blue-base);
 }
 
-.search_filled::placeholder {
-  color: black;
-}
-
-.icon_clear {
+.btn_clear {
   height: 1rem;
   width: 1rem;
   position: absolute;
   z-index: 1;
   right: 0.5rem;
   align-self: center;
-  opacity: 0.5;
-  background-image: var(--clear);
 }
 
-.icon_clear:hover {
-  opacity: 1;
+.btn_clear:hover {
   cursor: pointer;
+}
+
+.svg_search {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  align-self: center;
+  left: 9.5px;
 }
